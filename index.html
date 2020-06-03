@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
+    <title> Ecoleta</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
 </head>
 <body>
 
     <div id="page-home">
-
         <div class="content">
-
             <header>
                 <img src="./assets/img/logo.svg" alt="Logomarca" srcset="">
                 <a href="./create-point.html" target="">
                     <span></span>
                     Cadastre um ponto de coleta
                 </a>
-
             </header>
 
             <main>
                 <h1 class="">Seu marketplace de coleta de resíduos</h1>
-
-            
                 <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
-                
                 <a href="#"><span></span><strong>Pesquisar pontos de coletas</strong></a>
-
-
             </main>
-            
-
         </div>
-
     </div>
 
-    
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1> Pontos de coleta </h1>
+                <a href="#"> Fechar </a>
+            </div>
+            
+            <form action="./search-results.html">
+                <div class="search field">
+                    <input placeholder="Pesquise por cidade" type="text" name="search">
+                    <button>
+                        <img src="./assets/img/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 
-
-
-
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>

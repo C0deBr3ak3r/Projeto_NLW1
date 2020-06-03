@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
+    <title> Crie um ponto de coleta </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/create-point.css">
@@ -34,25 +34,25 @@
 
                 <div class="field">
                     <label for=""> Nome da entidade </label>
-                    <input type="text" name="companyName" id="">
+                    <input type="text" name="companyName" required>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
-                        <label for=""> Endereço </label>
-                        <input type="text" name="companyAddress" id="">
+                        <label for="companyAddress"> Endereço </label>
+                        <input type="text" name="companyAddress" required>
                     </div>
 
                     <div class="field">
-                        <label for=""> Número/Complemento </label>
-                        <input type="text" name="companyAdressComplement" id="">
+                        <label for="companyAdressComplemen"> Número/Complemento </label>
+                        <input type="text" name="companyAdressComplement" required>
                     </div>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
-                        <label for=""> Estado </label>
-                        <select name="companyState" id="">
+                        <label for="companyState"> Estado </label>
+                        <select name="companyState" required>
                             <option value="">Selecione o Estado</option>
                         </select>
 
@@ -60,14 +60,50 @@
                     </div>
 
                     <div class="field">
-                        <label for=""> Cidade </label>
-                        <select name="companyCity" id="" disabled>
-                            <option value="">Selecione a Cidade</option>
-                            <input type="hidden" name="state">
+                        <label for="companyCity"> Cidade </label>
+                        <select name="companyCity" required disabled>
+                            <option value="">Selecione a Cidade</option>    
                         </select>
                     </div>
 
                 </div>
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    <h2>Ítens de Coleta</h2>
+                </legend>
+
+                <div class="items-grid">
+                    <li data-id="1">
+                        <img src="./assets/img/lampadas.svg" alt="Lâmpadas">
+                        <span> Lâmpadas </span>
+                    </li>
+                    <li data-id="2">
+                        <img src="./assets/img/baterias.svg" alt="Pilhas e Baterias">
+                        <span> Pilhas e Baterias </span>
+                    </li>
+                    <li data-id="3">
+                        <img src="./assets/img/papeis-papelao.svg" alt="Papéis e Papelão">
+                        <span> Papéis e Papelão </span>
+                    </li>
+                    <li data-id="4">
+                        <img src="./assets/img/eletronicos.svg" alt="Resíduos Eletrônicos">
+                        <span> Resíduos Eletrônicos </span>
+                    </li>
+                    <li data-id="5">
+                        <img src="./assets/img/organicos.svg" alt="Resíduos Orgânicos">
+                        <span> Resíduos Orgânicos </span>
+                    </li>
+                    <li data-id="6">
+                        <img src="./assets/img/oleo.svg" alt="Óleo de Cozinha">
+                        <span> Óleo de Cozinha </span>
+                    </li>
+                </div>
+
+                <input type="hidden" name="items">
+
             </fieldset>
 
             <button type="submit">Cadstrar ponto de coleta</button>
