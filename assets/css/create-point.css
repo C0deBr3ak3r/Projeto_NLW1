@@ -1,4 +1,4 @@
-#page-crate-point {
+#page-create-point {
     width: 90%;
     max-width: 1100px;
 
@@ -72,7 +72,7 @@ form .field-group {
 }
 
 form input, form select {
-    background-color: #f0f0f5;
+    background-color: var(--background-color);
 
     border: 0;
     padding: 16px 24px;
@@ -115,5 +115,51 @@ form button{
 }
 
 form button:hover{
-    background-color: #2fb86e;
+    background-color: var(--hover-color);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+
+    height: 200px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img, .items-grid li span{
+    pointer-events: none;
 }
